@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; background: #09090b; }
+body { margin: 0; color: #f4f4f5; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #a16207; color: #fff; }
+
+.editor-content { min-height: calc(100vh - 150px); outline: none; line-height: 1.7; }
+.editor-content > * + * { margin-top: 0.8rem; }
+.editor-content h2 { font-size: 1.4rem; font-weight: 700; color: #f4f4f5; margin-top: 1.2rem; }
+.editor-content h3 { font-size: 1.15rem; font-weight: 600; color: #e4e4e7; margin-top: 1rem; }
+.editor-content ul { list-style: disc; padding-left: 1.5rem; }
+.editor-content ol { list-style: decimal; padding-left: 1.5rem; }
+.editor-content blockquote { border-left: 3px solid #52525b; padding-left: 1rem; color: #a1a1aa; }
+.editor-content p.is-editor-empty:first-child::before { color: #71717a; content: attr(data-placeholder); float: left; height: 0; pointer-events: none; }
+
+@media print {
+  body * { visibility: hidden; }
+  .printable-note, .printable-note * { visibility: visible; }
+  .printable-note { position: absolute; inset: 0; padding: 2rem; background: white; color: black; }
+}

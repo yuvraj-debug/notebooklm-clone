@@ -1,0 +1,18 @@
+# JavaScript build artifacts
+frontend/node_modules/
+frontend/.next/
+
+# Python artifacts and local runtime data
+backend/**/__pycache__/
+backend/*.db
+backend/uploads/*.pdf
+
+# Local environment secrets
+backend/.env.local
+
+dist/
+.venv/
+venv/
+
+**/.env
+backend/.env
